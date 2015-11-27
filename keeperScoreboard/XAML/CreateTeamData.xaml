@@ -1,0 +1,14 @@
+﻿<Window x:Class="keeperScoreboard.XAML.CreateTeamData"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:keeperScoreboard.XAML"
+        mc:Ignorable="d"
+        Title="Create Team Data" Height="114.706" Width="155.294" ResizeMode="NoResize" WindowStyle="ToolWindow">
+    <Grid>
+        <ComboBox x:Name="TeamNames" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="ViewReport" Content="View Report" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Width="120" Height="37" Click="ViewReport_Click"/>
+
+    </Grid>
+</Window>

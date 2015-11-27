@@ -1,0 +1,23 @@
+﻿<Window x:Class="keeperScoreboard.XAML.UpdateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:keeperScoreboard.XAML"
+        mc:Ignorable="d"
+        Title="Update Available: v" Height="219.231" Width="350.592" Background="Black" WindowStyle="ToolWindow">
+    <Grid>
+        <Label x:Name="label" Content="A new update is available, Would you like to update now?" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top" Height="31" Background="Black" Foreground="White"/>
+        <Label x:Name="lblCurrent" Content="Current Version: " HorizontalAlignment="Left" Margin="10,89,0,0" VerticalAlignment="Top" Height="31" Foreground="White"/>
+        <Label x:Name="lblNew" Content="New Version: " HorizontalAlignment="Left" Margin="10,120,0,0" VerticalAlignment="Top" Height="31" Foreground="White"/>
+        <TextBlock Margin="269,120,-269,-120">           
+    <Hyperlink NavigateUri="http://nathan-dev.com/projects/update/scoreboard_changelog.txt" RequestNavigate="Hyperlink_RequestNavigate">
+        Change Log
+    </Hyperlink>
+        </TextBlock>
+        <Button x:Name="bntYes" Content="Yes" HorizontalAlignment="Left" Margin="18,156,0,0" VerticalAlignment="Top" Width="75" Click="bntYes_Click"/>
+        <Button x:Name="bntNo" Content="No" HorizontalAlignment="Left" Margin="98,156,0,0" VerticalAlignment="Top" Width="75" Click="bntNo_Click"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="48" Margin="10,10,0,0" VerticalAlignment="Top" Width="91" Source="/keeperScoreboard;component/Resources/logo.png"/>
+
+    </Grid>
+</Window>

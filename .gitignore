@@ -45,3 +45,21 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.vssscc
+*.pdb
+keeperScoreboard/bin/*
+keeperScoreboard/obj/*
+keeperScoreboardServer/bin/*
+keeperScoreboardServer/obj/*
+keeperScoreboardServerWPF/bin/*
+keeperScoreboardServerWPF/obj/*
+PubStats/bin/*
+PubStats/obj/*
+update/bin/*
+update/obj/*
+UpdateClient/bin/*
+UpdateClient/obj/*
+*.log
+*.scbrd
+*.dll
+*.zip

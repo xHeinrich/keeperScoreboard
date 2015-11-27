@@ -1,0 +1,87 @@
+{
+"weapons": [{
+			"uic-weapon_unlockm416_fancy": {
+				"unlockImageConfig": {
+					"category": "weapon_unlock",
+					"slug": "m416_fancy",
+					"versions": {
+						"smallinv": {
+							"path": "warsaw\/gamedata\/weapon_unlock\/smallinv.png",
+							"isSprite": true,
+							"height": 54,
+							"name": "smallinv",
+							"width": 90
+						},
+						"medium": {
+							"path": "warsaw\/gamedata\/weapon_unlock\/medium.png",
+							"isSprite": true,
+							"height": 88,
+							"name": "medium",
+							"width": 147
+						},
+						"squarelarge": {
+							"path": "warsaw\/gamedata\/weapon_unlock\/squarelarge\/m416_fancy.png",
+							"isSprite": false,
+							"height": 256,
+							"name": "squarelarge",
+							"width": 256
+						},
+						"mobile": {
+							"path": "warsaw\/gamedata\/weapon_unlock\/mobile\/m416_fancy.png",
+							"isSprite": false,
+							"height": 88,
+							"name": "mobile",
+							"width": 147
+						},
+						"small": {
+							"path": "warsaw\/gamedata\/weapon_unlock\/small.png",
+							"isSprite": true,
+							"height": 54,
+							"name": "small",
+							"width": 90
+						},
+						"xsmall": {
+							"path": "warsaw\/gamedata\/weapon_unlock\/xsmall.png",
+							"isSprite": true,
+							"height": 43,
+							"name": "xsmall",
+							"width": 79
+						},
+						"mediumns": {
+							"path": "warsaw\/gamedata\/weapon_unlock\/mediumns\/m416_fancy.png",
+							"isSprite": false,
+							"height": 88,
+							"name": "mediumns",
+							"width": 147
+						},
+						"smallns": {
+							"path": "warsaw\/gamedata\/weapon_unlock\/smallns\/m416_fancy.png",
+							"isSprite": false,
+							"height": 54,
+							"name": "smallns",
+							"width": 90
+						}
+					}
+				}
+			},
+			"1915356177": {
+				"category": "WARSAW_ID_P_CAT_DMR",
+				"rareness": "RarenessLevel_Standard",
+				"name": "WARSAW_ID_P_WNAME_M39",
+				"req": [{
+					"c": "sc_dmrs",
+					"t": "b",
+					"v": 37000.0
+				},
+				{
+					"t": "l",
+					"l": "sc_wpn_dmr"
+				}],
+				"see": ["ic-weaponm39_lineart",
+				"uic-weapon_unlockm39_fancy",
+				"wp-5f6ff8659195bfdb99300647919a300f"],
+				"categoryType": "DMRs",
+				"slug": "m39-emr"
+			}
+		}
+	]}

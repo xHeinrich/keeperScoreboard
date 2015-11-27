@@ -1,0 +1,227 @@
+{"modes":[
+{
+	"id": 64,
+	"label": "Conquest Large",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+},
+{
+	"id": 1,
+	"label": "Conquest",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+},
+{
+	"id": 2097152,
+	"label": "Obliteration",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+},
+{
+	"id": 1024,
+	"label": "Domination",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+},
+{
+	"id": 2,
+	"label": "Rush",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+},
+{
+	"id": 8,
+	"label": "Squad Deathmatch",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+},
+{
+	"id": 32,
+	"label": "Team Deathmatch",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+},
+{
+	"id": 16777216,
+	"label": "Defuse",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+},
+{
+	"id": 8388608,
+	"label": "Air Superiority",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+},
+{
+	"id": 524288,
+	"label": "Capture the Flag",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+},
+{
+	"id": 67108864,
+	"label": "Carrier Assault Large",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+},
+{
+	"id": 134217728,
+	"label": "Carrier Assault",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+},
+{
+	"id": 34359738368,
+	"label": "Chain Link",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+},
+{
+	"id": 68719476736,
+	"label": "Conquest Ladder",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+},
+{
+	"id": 137438953472,
+	"label": "Squad Obliteration",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+},
+{
+	"id": 512,
+	"label": "Gun Master",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+},
+{
+	"id": 268435456,
+	"label": "BLOOD MONEY",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+},
+{
+	"id": 4294967296,
+	"label": "HOTWIRE",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+},
+{
+	"id": 2147483648,
+	"label": "HEIST",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+},
+{
+	"id": 8589934592,
+	"label": "CROSSHAIR",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+},
+{
+	"id": 17179869184,
+	"label": "RESCUE",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+},
+{
+	"id": 1073741824,
+	"label": "CONQUEST LARGE",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+},
+{
+	"id": 536870912,
+	"label": "CONQUEST",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+},
+{
+	"id": 549755813888,
+	"label": "SQUAD HEIST",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+},
+{
+	"id": 274877906944,
+	"label": "BOUNTY HUNTER",
+	"platforms": [1,
+	4,
+	32,
+	2,
+	64]
+}
+]}

@@ -1,0 +1,17 @@
+﻿<Window x:Class="keeperScoreboard.XAML.CreateTeam"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:keeperScoreboard.XAML"
+        mc:Ignorable="d"
+        Title="Competitive Team Creation" Height="158" Width="300" ResizeMode="NoResize" WindowStyle="ToolWindow">
+    <Grid>
+        <TextBox x:Name="TeamName" HorizontalAlignment="Left" Height="23" Margin="10,37,0,0" TextWrapping="Wrap" Text="Team name" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="CurrentTeams" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="272"/>
+        <Button x:Name="AddTeamMembers" Content="Add Team Members" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Width="120" Click="AddTeamMembers_Click"/>
+        <Button x:Name="AddTeamLogo" Content="Add Team Logo" HorizontalAlignment="Left" Margin="162,90,0,0" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Button x:Name="SubmitTeam" Content="Submit Team" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="120" Click="SubmitTeam_Click"/>
+
+    </Grid>
+</Window>

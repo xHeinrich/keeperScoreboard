@@ -1,0 +1,14 @@
+﻿<Window x:Class="update.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:update"
+        mc:Ignorable="d"
+        Title="Updating" Height="76.346" Width="326.7" WindowStyle="ToolWindow" ResizeMode="NoResize">
+    <Grid>
+        <ProgressBar x:Name="pbDownload" HorizontalAlignment="Left" Height="18" Margin="10,12,0,0" VerticalAlignment="Top" Width="291"/>
+        <Label x:Name="lblDownload" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="291" Height="26" HorizontalContentAlignment="Center"/>
+
+    </Grid>
+</Window>
