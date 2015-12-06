@@ -13,9 +13,6 @@ namespace keeperScoreboard.Classes
     public class ScoreboardRenderer
     {
         XAML.Scoreboard m_parent;
-         ~ScoreboardRenderer()
-        {
-        }
         public ScoreboardRenderer(XAML.Scoreboard parent, string mapID, CustomSnapshotRoot root, string teamlogo1 = "", string teamlogo2 = "")
         {
             ScoreboardRenderer1(parent, mapID, root, teamlogo1, teamlogo2);

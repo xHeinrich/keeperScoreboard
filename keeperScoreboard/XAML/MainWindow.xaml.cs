@@ -682,5 +682,33 @@ namespace keeperScoreboard
                 scoreboard.Show();
             }
         }
+
+        private void btnViewClassCount_Click(object sender, RoutedEventArgs e)
+        {
+            guid = "";
+            try
+            {
+
+                string[] tokenString = txtBattlelogURL.Text.Split('/');
+
+                foreach (string token in tokenString)
+                {
+                    Guid guidNull;
+                    if (Guid.TryParse(token, out guidNull))
+                    {
+                        guid = guidNull.ToString();
+                        break;
+                    }
+                }
+                XAML.ClassCounter classCounter = new XAML.ClassCounter(guid);
+                classCounter.Show();
+                Classes.Logger.addLog("btnViewClassCount_Click() - Opened ClassCounter");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("please enter a valid battlelog url: " + ex.ToString());
+            }
+
+        }
     }
 }

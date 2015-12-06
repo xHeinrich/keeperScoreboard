@@ -1,0 +1,95 @@
+﻿<Window x:Class="keeperScoreboard.XAML.ClassCounter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:keeperScoreboard.XAML"
+        mc:Ignorable="d"
+        Title="Class Counter" Height="232.258" Width="406.78">
+    <Grid Background="Black">
+        <!-- Team 1 -->
+        <Image x:Name="imgFaction1" HorizontalAlignment="Left" Height="52" Margin="10,10,0,0" VerticalAlignment="Top" Width="120"/>
+        <Image x:Name="imgAssault1" HorizontalAlignment="Left" Height="17" Margin="10,62,0,0" VerticalAlignment="Top" Width="17" Source="/keeperScoreboard;component/Resources/kit_icons/0.png" Stretch="Fill"/>
+        <Image x:Name="imgEngineer1" HorizontalAlignment="Left" Height="17" Margin="32,62,0,0" VerticalAlignment="Top" Width="17" Source="/keeperScoreboard;component/Resources/kit_icons/1.png"/>
+        <Image x:Name="imgSupport1" HorizontalAlignment="Left" Height="17" Margin="54,62,0,0" VerticalAlignment="Top" Width="17" Source="/keeperScoreboard;component/Resources/kit_icons/2.png"/>
+        <Image x:Name="imgRecon1" HorizontalAlignment="Left" Height="17" Margin="76,62,0,0" VerticalAlignment="Top" Width="17" Source="/keeperScoreboard;component/Resources/kit_icons/3.png"/>
+        <!-- Team 2 -->
+        <Image x:Name="imgFaction2" HorizontalAlignment="Left" Height="52" Margin="267,10,0,0" VerticalAlignment="Top" Width="120"/>
+        <Image x:Name="imgAssault2" HorizontalAlignment="Left" Height="17" Margin="267,62,0,0" VerticalAlignment="Top" Width="17" Source="/keeperScoreboard;component/Resources/kit_icons/0.png"/>
+        <Image x:Name="imgEngineer2" HorizontalAlignment="Left" Height="17" Margin="289,62,0,0" VerticalAlignment="Top" Width="17" Source="/keeperScoreboard;component/Resources/kit_icons/1.png"/>
+        <Image x:Name="imgSupport2" HorizontalAlignment="Left" Height="17" Margin="311,62,0,0" VerticalAlignment="Top" Width="17" Source="/keeperScoreboard;component/Resources/kit_icons/2.png"/>
+        <Image x:Name="imgRecon2" HorizontalAlignment="Left" Height="17" Margin="333,62,0,0" VerticalAlignment="Top" Width="17" Source="/keeperScoreboard;component/Resources/kit_icons/3.png"/>
+        <ProgressBar x:Name="pbAssault1" HorizontalAlignment="Left" Height="10" Margin="-31,129,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.5,0.5" Maximum="32">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <ProgressBar x:Name="pbEngineer1" HorizontalAlignment="Left" Height="10" Margin="-9,129,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.5,0.5" Maximum="32">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <ProgressBar x:Name="pbSupport1" HorizontalAlignment="Left" Height="10" Margin="13,129,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.5,0.5" Maximum="32">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <ProgressBar x:Name="pbRecon1" HorizontalAlignment="Left" Height="10" Margin="35,129,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.5,0.5" Maximum="32">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <ProgressBar x:Name="pbAssault2" HorizontalAlignment="Left" Height="10" Margin="227,129,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.5,0.5" Maximum="32">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <ProgressBar x:Name="pbEngineer2" HorizontalAlignment="Left" Height="10" Margin="249,129,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.5,0.5" Maximum="32">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <ProgressBar x:Name="pbSupport2" HorizontalAlignment="Left" Height="10" Margin="271,129,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.5,0.5" Maximum="32">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <ProgressBar x:Name="pbRecon2" HorizontalAlignment="Left" Height="10" Margin="293,129,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.5,0.5" Maximum="32">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <Label x:Name="lblt1Assault" Content="0" HorizontalAlignment="Left" Margin="11,178,0,-3" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="lblt1Engineer" Content="0" HorizontalAlignment="Left" Margin="33,178,0,-3" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="lblt1Support" Content="0" HorizontalAlignment="Left" Margin="55,178,0,-3" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="lblt1Recon" Content="0" HorizontalAlignment="Left" Margin="77,178,0,-3" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="lblt2Assault" Content="0" HorizontalAlignment="Left" Margin="269,178,0,-3" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="lblt2Engineer" Content="0" HorizontalAlignment="Left" Margin="290,178,0,-3" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="lblt2Support" Content="0" HorizontalAlignment="Left" Margin="312,178,0,-3" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="lblt2Recon" Content="0" HorizontalAlignment="Left" Margin="335,178,0,-3" VerticalAlignment="Top" Foreground="White"/>
+    </Grid>
+</Window>

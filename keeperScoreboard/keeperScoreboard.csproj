@@ -170,6 +170,9 @@
     <Compile Include="XAML\UpdateWindow.xaml.cs">
       <DependentUpon>UpdateWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="XAML\ClassCounter.xaml.cs">
+      <DependentUpon>ClassCounter.xaml</DependentUpon>
+    </Compile>
     <Page Include="Simple Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -240,6 +243,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="XAML\UpdateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XAML\ClassCounter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -325,10 +332,10 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AutoBuild.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\kit_icons\3.png" />
-    <None Include="Resources\kit_icons\2.png" />
-    <None Include="Resources\kit_icons\1.png" />
-    <None Include="Resources\kit_icons\0.png" />
+    <Resource Include="Resources\kit_icons\3.png" />
+    <Resource Include="Resources\kit_icons\2.png" />
+    <Resource Include="Resources\kit_icons\1.png" />
+    <Resource Include="Resources\kit_icons\0.png" />
     <Resource Include="Resources\weaponData.txt" />
     <Resource Include="Resources\map_images\mp_bank.png" />
     <Resource Include="Resources\map_images\mp_bloodout.png" />

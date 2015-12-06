@@ -44,6 +44,7 @@
                     <Button x:Name="btnLogStats" Content="Log Stats" Margin="677,45,10,0" VerticalAlignment="Top" Click="btnLogStats_Click" Height="30 " />
                     <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="744,142,0,0" VerticalAlignment="Top" Width="75" Click="button_Click_1" Visibility="Hidden"/>
                     <Button x:Name="btnServerRefresh" Content="Refresh Servers" Margin="677,80,10,0" VerticalAlignment="Top" Click="btnServerRefresh_Click" Height="30 "/>
+                    <Button x:Name="btnViewClassCount" Content="Class Counter" Margin="677,115,10,0" VerticalAlignment="Top" Click="btnViewClassCount_Click" Height="30 "/>
                     <!--<Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="690,122,0,0" VerticalAlignment="Top" Width="74" Click="button_Click"/>-->
                 </Grid>
             </TabItem>
@@ -100,8 +101,8 @@
                             </Hyperlink>
                             </TextBlock>
                             <TextBlock Margin="0,17,0,225">
-                            <Hyperlink NavigateUri="https://twitter.com/x5_CryptiK" RequestNavigate="Hyperlink_RequestNavigate">
-                            x5-Cryptik
+                            <Hyperlink NavigateUri="https://twitter.com/syfCryptiK" RequestNavigate="Hyperlink_RequestNavigate">
+                            syf-Cryptik
                             </Hyperlink>
                             </TextBlock>
                         </Grid>
