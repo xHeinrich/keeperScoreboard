@@ -56,7 +56,7 @@ namespace keeperScoreboard.XAML
                 {
                     root = keeper.getKeeperInfo(guid);
                 };
-                worker.RunWorkerCompleted += delegate
+worker.RunWorkerCompleted += async delegate
                 {
                     if (root == null)
                     {
@@ -96,7 +96,15 @@ namespace keeperScoreboard.XAML
                             player.primaryWeapon = playerInfo.kitList[Convert.ToInt32(playerInfo.selectedKit)].kitIdInformation[0];
                             player.secondaryWeapon = playerInfo.kitList[Convert.ToInt32(playerInfo.selectedKit)].kitIdInformation[1];
                         }
-                        this.Title = "Logging: " + totalPlayers.ToString() + "P | " + Classes.UsefulFunctions.getTime(root.snapshot.roundTime, 1) + " | " + Classes.JSONHelper.whatMap(root.snapshot.mapId);
+                        foreach (var player in root.snapshot.teamInfo.team2.player)
+                        {
+                            Classes.Structs.PlayerLoadout playerInfo = await Classes.GetPlayersKit.GetWeaponInfo(player.playerId, player.name);
+
+                            player.kit = playerInfo.selectedKit;
+                            player.primaryWeapon = playerInfo.kitList[Convert.ToInt32(playerInfo.selectedKit)].kitIdInformation[0];
+                            player.secondaryWeapon = playerInfo.kitList[Convert.ToInt32(playerInfo.selectedKit)].kitIdInformation[1];
+                        }
+                this.Title = "Logging: " + totalPlayers.ToString() + "P | " + Classes.UsefulFunctions.getTime(root.snapshot.roundTime, 1) + " | " + Classes.JSONHelper.whatMap(root.snapshot.mapId);
                         if (root.snapshot.roundTime != 0)
                         {
                             extendedStats.Add(root);
