@@ -43,7 +43,8 @@ namespace keeperScoreboard.XAML
             ShowCustomBalloon("Stats Logging", "Started logging on server: \n " + guid);
 
         }
-        public void getData()
+
+        public async void getData()
         {
 
             Classes.CustomSnapshotRoot root = null;
@@ -87,6 +88,14 @@ namespace keeperScoreboard.XAML
                         lblCountPlayers.Content = "Getting Statistics for " + totalPlayers.ToString() + " players";
                         lblMap.Content = "Map: " + Classes.JSONHelper.whatMap(root.snapshot.mapId);
                         lblMode.Content = "Mode: " + Classes.JSONHelper.whatMode(root.snapshot.modeId);
+                        foreach( var player in root.snapshot.teamInfo.team1.player )
+                        {
+                            Classes.Structs.PlayerLoadout playerInfo = await Classes.GetPlayersKit.GetWeaponInfo(player.playerId, player.name);
+                        
+                            player.kit = playerInfo.selectedKit;
+                            player.primaryWeapon = playerInfo.kitList[Convert.ToInt32(playerInfo.selectedKit)].kitIdInformation[0];
+                            player.secondaryWeapon = playerInfo.kitList[Convert.ToInt32(playerInfo.selectedKit)].kitIdInformation[1];
+                        }
                         this.Title = "Logging: " + totalPlayers.ToString() + "P | " + Classes.UsefulFunctions.getTime(root.snapshot.roundTime, 1) + " | " + Classes.JSONHelper.whatMap(root.snapshot.mapId);
                         if (root.snapshot.roundTime != 0)
                         {
@@ -140,7 +149,7 @@ namespace keeperScoreboard.XAML
                 };
                 worker.RunWorkerAsync();
             };
-            Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Background, workAction);
+            await Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Background, workAction);
         }
         public void _timer_Elapsed(object sender, ElapsedEventArgs e)
         {

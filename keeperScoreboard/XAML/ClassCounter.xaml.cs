@@ -4,6 +4,10 @@ using System.Timers;
 using System.ComponentModel;
 using System.Windows.Threading;
 using System.Windows.Media;
+using System.Drawing;
+using System.Runtime.InteropServices;
+using System.Windows.Media.Imaging;
+
 namespace keeperScoreboard.XAML
 {
     /// <summary>
@@ -19,12 +23,20 @@ namespace keeperScoreboard.XAML
         public int t2Engineer { get; set; }
         public int t2Support { get; set; }
         public int t2Recon { get; set; }
+        public int defib { get; set; }
     }
     public partial class ClassCounter : Window
     {
+        public Image MyIcon
+        {
+            get
+            {
+                return new Bitmap(@"Resources/usa.png");
+            }
+        }
         string guid = "";
         public System.Timers.Timer _timer;
-        public classCounters classCounts = new classCounters();
+        classCounters classCounts = new classCounters();
         public ClassCounter(string guidFromMain = "", Classes.CustomSnapshotRoot root = null)
         {
             guid = guidFromMain;
@@ -44,9 +56,11 @@ namespace keeperScoreboard.XAML
         }
         public async void _timer_Elapsed(object sender, ElapsedEventArgs e)
         {
+
+            classCounts = null;
+            classCounts = new classCounters();
             Classes.CustomSnapshotRoot root = null;
             Classes.KeeperAPI keeper = new Classes.KeeperAPI();
-            //classCounts = null;
             Action workAction = delegate
             {
                 BackgroundWorker worker = new  BackgroundWorker();
@@ -58,6 +72,19 @@ namespace keeperScoreboard.XAML
                 {
                     try
                     {
+                        if (Classes.JSONHelper.whatFaction(root.snapshot.teamInfo.team1.faction) == "US")
+                            imgFaction1.Source = loadBitmap(Properties.Resources.usa);
+                        else if (Classes.JSONHelper.whatFaction(root.snapshot.teamInfo.team1.faction) == "CN")
+                            imgFaction1.Source = loadBitmap(Properties.Resources.china);
+                        else if (Classes.JSONHelper.whatFaction(root.snapshot.teamInfo.team1.faction) == "RU")
+                            imgFaction1.Source = loadBitmap(Properties.Resources.ru);
+                        if (Classes.JSONHelper.whatFaction(root.snapshot.teamInfo.team2.faction) == "US")
+                            imgFaction2.Source = loadBitmap(Properties.Resources.usa);
+                        else if (Classes.JSONHelper.whatFaction(root.snapshot.teamInfo.team2.faction) == "CN")
+                            imgFaction2.Source = loadBitmap(Properties.Resources.china);
+                        else if (Classes.JSONHelper.whatFaction(root.snapshot.teamInfo.team2.faction) == "RU")
+                            imgFaction2.Source = loadBitmap(Properties.Resources.ru);
+                            
                         foreach (var player in root.snapshot.teamInfo.team1.player)
                         {
                             
@@ -66,7 +93,10 @@ namespace keeperScoreboard.XAML
                             {
                                 case "0":
                                     classCounts.t1Assault += 1;
-                                    break;
+
+                                    if (playerInfo.kitList[0].kitIdInformation[3] != 2887915611 && playerInfo.kitList[0].kitIdInformation[4] != 2887915611)
+                                        classCounts.defib += 1;
+                                    break; //2887915611
                                 case "1":
                                     classCounts.t1Engineer += 1;
                                     break;
@@ -100,6 +130,8 @@ namespace keeperScoreboard.XAML
                             {
                                 case "0":
                                     classCounts.t2Assault += 1;
+                                    if (playerInfo.kitList[0].kitIdInformation[3] != 2887915611 && playerInfo.kitList[0].kitIdInformation[4] != 2887915611)
+                                        classCounts.defib += 1;
                                     break;
                                 case "1":
                                     classCounts.t2Engineer += 1;
@@ -126,7 +158,7 @@ namespace keeperScoreboard.XAML
                         //Recon
                         pbRecon2.Value = classCounts.t2Recon;
                         lblt2Recon.Content = classCounts.t2Recon.ToString();
-                        classCounts = new classCounters();
+                        lblAssaultPlayerWithDefibs.Content = classCounts.defib.ToString();
                     }
                     catch (Exception ex)
                     {
@@ -138,7 +170,25 @@ namespace keeperScoreboard.XAML
             };
             await Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Background, workAction);
         }
+        [DllImport("gdi32")]
+        static extern int DeleteObject(IntPtr o);
+        public static BitmapSource loadBitmap(System.Drawing.Bitmap source)
+        {
+            IntPtr ip = source.GetHbitmap();
+            BitmapSource bs = null;
+            try
+            {
+                bs = System.Windows.Interop.Imaging.CreateBitmapSourceFromHBitmap(ip,
+                   IntPtr.Zero, Int32Rect.Empty,
+                   System.Windows.Media.Imaging.BitmapSizeOptions.FromEmptyOptions());
+            }
+            finally
+            {
+                DeleteObject(ip);
+            }
 
+            return bs;
+        }
         private void Window_Closing(object sender, CancelEventArgs e)
         {
             if (_timer != null && _timer.Enabled == true)

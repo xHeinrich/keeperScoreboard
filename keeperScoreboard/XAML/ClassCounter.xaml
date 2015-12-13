@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:keeperScoreboard.XAML"
         mc:Ignorable="d"
-        Title="Class Counter" Height="232.258" Width="406.78">
+        Title="Class Counter" Height="241.925" Width="406.78">
     <Grid Background="Black">
         <!-- Team 1 -->
         <Image x:Name="imgFaction1" HorizontalAlignment="Left" Height="52" Margin="10,10,0,0" VerticalAlignment="Top" Width="120"/>
@@ -91,5 +91,8 @@
         <Label x:Name="lblt2Engineer" Content="0" HorizontalAlignment="Left" Margin="290,178,0,-3" VerticalAlignment="Top" Foreground="White"/>
         <Label x:Name="lblt2Support" Content="0" HorizontalAlignment="Left" Margin="312,178,0,-3" VerticalAlignment="Top" Foreground="White"/>
         <Label x:Name="lblt2Recon" Content="0" HorizontalAlignment="Left" Margin="335,178,0,-3" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="lblAssaultPlayerWithDefibs" Content="0" HorizontalAlignment="Left" Margin="152,57,0,0" VerticalAlignment="Top" Foreground="White" Background="Black"/>
+        <Image x:Name="imgAssault" HorizontalAlignment="Left" Height="17" Margin="130,62,0,0" VerticalAlignment="Top" Width="17" Source="/keeperScoreboard;component/Resources/kit_icons/0.png" Stretch="Fill"/>
+        <Label x:Name="lblAwDText" Content="Assault wo/ Defib" HorizontalAlignment="Left" Margin="130,31,0,0" VerticalAlignment="Top" Foreground="White"/>
     </Grid>
 </Window>

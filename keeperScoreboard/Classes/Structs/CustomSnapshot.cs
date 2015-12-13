@@ -56,6 +56,9 @@ namespace keeperScoreboard.Classes
         public int role { get; set; }
         public int bombsDetonated { get; set; }
         public List<long> bombDetonationTime { get; set; }
+        public int kit { get; set; }
+        public ulong primaryWeapon { get; set; }
+        public ulong secondaryWeapon { get; set; }
         public int CompareTo(playersData other)
         {
             // Alphabetic sort if salary is equal. [A to Z]
