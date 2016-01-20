@@ -23,14 +23,16 @@ namespace StormBackend
             if (!IsRunning)
                 return;
 
-            ObservableCollection<SServers> servers = await CServerCrawler.UpdateServers();
+            List<SServers> servers = await CServerCrawler.UpdateServers();
             CLogging.AddLog(String.Format("Updating {0} servers", servers.Count), LogType.Server);
             foreach (var server in servers)
             {
                 if (Servers.Contains(server))
                 {
                     int i = Servers.IndexOf(server);
-                    Servers[i] = server;
+                    Servers[i].LastUpdate = DateTime.Now;
+                    if(Servers[i].MapID != server.MapID)
+                        Servers[i].MapID = server.MapID;
                 }
                 else
                 {

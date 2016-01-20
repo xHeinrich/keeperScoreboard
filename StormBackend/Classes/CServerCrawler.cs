@@ -10,9 +10,9 @@ namespace StormBackend
     public static class CServerCrawler
     {
 
-        public static async Task<ObservableCollection<SServers>> UpdateServers()
+        public static async Task<List<SServers>> UpdateServers()
         {
-            ObservableCollection<SServers> servers = new ObservableCollection<SServers>();
+            List<SServers> servers = new List<SServers>();
             string data;
             // all squad oblit servers
             string url =
