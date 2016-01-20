@@ -20,7 +20,22 @@ namespace StormBackend
         public int _PlayersPlaying { get; set; }
         public DateTime _LastUpdate { get; set; }
         public List<CustomSnapshotRoot> _Snapshots { get ; set; }
-        
+
+        public override bool Equals(object obj)
+        {
+            SServers y = obj as SServers;
+
+            if (y == null)
+                return false;
+
+            return this.ServerGuid == y.ServerGuid;
+        }
+
+        public override int GetHashCode()
+        {
+            return this.ServerGuid.GetHashCode();
+        }
+
         public List<CustomSnapshotRoot> Snapshots
         {
             get { return _Snapshots; }

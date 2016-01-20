@@ -41,18 +41,8 @@ namespace StormBackend
         }
         static void LogicLoop(object sender, ElapsedEventArgs e)
         {
-            App.Current.Dispatcher.Invoke((Action)delegate // <--- HERE
-            {
-                try
-                {
-                    Program.UpdateServers();
+            ThreadPool.QueueUserWorkItem(new WaitCallback(obj => Program.UpdateServers()));
 
-                }
-                catch (Exception ex)
-                {
-                    CLogging.AddLog(ex.ToString(), LogType.Error);
-                }
-            });
 
         }
         private static void CurrentDomainOnUnhandledException(object sender, UnhandledExceptionEventArgs unhandledExceptionEventArgs)

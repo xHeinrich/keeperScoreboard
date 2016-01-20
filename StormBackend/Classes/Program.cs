@@ -11,7 +11,13 @@ namespace StormBackend
         public static ObservableCollection<SLogging> Logs = new ObservableCollection<SLogging>();
         public static ObservableCollection<SServers> Servers = new ObservableCollection<SServers>();
         public static bool IsRunning = true;
-        
+        private static object ServerLockObject = new object();
+
+        static Program()
+        {
+            System.Windows.Data.BindingOperations.EnableCollectionSynchronization(Servers, ServerLockObject);
+        }
+
         public async static void UpdateServers()
         {
             if (!IsRunning)
@@ -21,10 +27,9 @@ namespace StormBackend
             CLogging.AddLog(String.Format("Updating {0} servers", servers.Count), LogType.Server);
             foreach (var server in servers)
             {
-                var item = Servers.FirstOrDefault(i => i._ServerGuid == server._ServerGuid);
-                if (item != null)
+                if (Servers.Contains(server))
                 {
-                    int i = Servers.IndexOf(item);
+                    int i = Servers.IndexOf(server);
                     Servers[i] = server;
                 }
                 else

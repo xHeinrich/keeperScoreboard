@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace StormBackend
 {
@@ -10,7 +11,7 @@ namespace StormBackend
     {
         public static void AddLog(string log = "", LogType type = LogType.Error)
         {
-            App.Current.Dispatcher.Invoke((Action)delegate // <--- HERE
+            Application.Current.Dispatcher.Invoke((Action)delegate // <--- HERE
             {
                 Program.Logs.Add(new SLogging
                 {
